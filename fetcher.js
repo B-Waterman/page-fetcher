@@ -9,10 +9,8 @@
 const request = require('request');
 const fs = require('fs');
 
-const targetURL = process.argv[1]; 
-//the url meant to be downloaded, input on the cmd line, unknown what order yet
-const targetFilePath = process.argv[2];
-//the location the file will be copied to, unknown order rn
+const targetURL = process.argv[2]; 
+const targetFilePath = process.argv[3];
 
 request(targetURL, (err, response, body) => {
   if (err) console.error(err);
