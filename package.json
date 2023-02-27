@@ -1,0 +1,22 @@
+{
+  "name": "page-fetcher",
+  "version": "1.0.0",
+  "description": "Downloads the content of a webpage to designated local file path, & logs file size.",
+  "main": "fetcher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/B-Waterman/page-fetcher.git"
+  },
+  "author": "Brooke Waterman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/B-Waterman/page-fetcher/issues"
+  },
+  "homepage": "https://github.com/B-Waterman/page-fetcher#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
