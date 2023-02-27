@@ -1,7 +1,7 @@
 //Goals:
 //1)should take 2 cmd line args
 //  -URL
-//  -local file path
+//  -local file path, CREATE INDEX.HTML FILE IN DIRECTORY
 //2)should download URL's resource to local file path given
 //3)should console.log msg like "Download complete and [#] bytes saved to [local file path]"
 
@@ -13,11 +13,17 @@
 const request = require('request');
 const fs = require('fs');
 
-const content = 'BLAH';
+const targetURL = process.argv[]; 
+//the url meant to be downloaded, input on the cmd line, unknown what order yet
+const targetFilePath = process.argv[];
+//the location the file will be copied to, unknown order rn
 
-fs.writeFile('/Users/HappyPathButItsLiterallyMyFilePath', content, err => {
-  if (err) {
-    console.error(err);
-  }
-  // Tada the file do be written. Now fill it in.
+request(targetURL, (err, response, body) => {
+  if (err) console.error(err);
+  fs.writeFile(targetFilePath, body, err => {
+    if (err) {
+      console.error(err);
+    }
+  });
+
 });
