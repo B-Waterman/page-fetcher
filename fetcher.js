@@ -1,11 +1,3 @@
-//Goals:
-//1)should take 2 cmd line args
-//  -URL
-//  -local file path, CREATE INDEX.HTML FILE IN DIRECTORY
-//2)should download URL's resource to local file path given
-//3)should console.log msg like "Download complete and [#] bytes saved to [local file path]"
-
-
 const request = require('request');
 const fs = require('fs');
 
